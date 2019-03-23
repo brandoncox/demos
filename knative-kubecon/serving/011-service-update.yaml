@@ -2,7 +2,7 @@ apiVersion: serving.knative.dev/v1alpha1
 kind: Service
 metadata:
   name: dumpy
-  namespace: myproject
+
 spec:
   release:
     revisions: ["dumpy-00001", "dumpy-00002"]
@@ -17,7 +17,7 @@ spec:
           name: openshift-builds # change that
           arguments:
           - name: IMAGE_STREAM
-            value: golang:1.11
+            value: golang:1.8
           - name: IMAGE
             value: "dumpy:latest"
           - name: NAME
@@ -30,4 +30,4 @@ spec:
           containerConcurrency: 1
           container:
             imagePullPolicy: Always
-            image: docker-registry.default.svc:5000/myproject/dumpy:latest
+            image: docker-registry.default.svc:5000/dumdum/dumpy:latest

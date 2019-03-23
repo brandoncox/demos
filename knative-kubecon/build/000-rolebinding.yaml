@@ -56,7 +56,6 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: default
-  namespace: myproject
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -69,7 +68,6 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: default
-  namespace: myproject
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -82,4 +80,3 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: default
-  namespace: myproject
